@@ -6,6 +6,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import io.github.haykam821.dehand.ClientMain;
+import io.github.haykam821.dehand.config.EmptyHandVisibility;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.item.HeldItemRenderer;
 
@@ -16,7 +18,10 @@ public class HeldItemRendererMixin {
 
 	@Inject(method = "renderArmHoldingItem", at = @At("HEAD"), cancellable = true)
 	private void preventIdleHandRendering(CallbackInfo ci) {
-		if (!this.client.player.handSwinging) {
+		EmptyHandVisibility visibility = ClientMain.getConfig().emptyHandVisibility;
+		if (visibility == EmptyHandVisibility.ALWAYS) return;
+
+		if (visibility == EmptyHandVisibility.NEVER || !this.client.player.handSwinging) {
 			ci.cancel();
 		}
 	}

@@ -12,6 +12,14 @@
 		"issues": "https://github.com/haykam821/Dehand/issues"
 	},
 	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"io.github.haykam821.dehand.ClientMain"
+		],
+		"modmenu": [
+			"io.github.haykam821.dehand.config.ModMenuCompatibility"
+		]
+	},
 	"mixins": [
 		"dehand.mixin.json"
 	],

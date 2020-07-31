@@ -1,0 +1,9 @@
+{
+	"dehand.emptyHandVisibility.always": "Always",
+	"dehand.emptyHandVisibility.never": "Never",
+	"dehand.emptyHandVisibility.whileSwinging": "While Swinging",
+	"text.autoconfig.dehand.option.emptyHandVisibility": "Empty Hand Visibility",
+	"text.autoconfig.dehand.option.emptyHandVisibility.@Tooltip[0]": "The contexts in which the player's empty main",
+	"text.autoconfig.dehand.option.emptyHandVisibility.@Tooltip[1]": "hand is shown in the first-person perspective.",
+	"text.autoconfig.dehand.title": "Dehand Configuration"
+}
