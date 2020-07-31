@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "dehand",
+	"version": "${version}",
+	"name": "Dehand",
+	"description": "Removes the hand from the first-person perspective.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Dehand#readme",
+		"issues": "https://github.com/haykam821/Dehand/issues"
+	},
+	"environment": "client",
+	"mixins": [
+		"dehand.mixin.json"
+	],
+	"license": "MIT",
+	"icon": "assets/dehand/icon.png",
+	"depends": {
+		"fabricloader": ">=0.4.0"
+	}
+}
